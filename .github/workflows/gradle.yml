@@ -24,6 +24,7 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    # Изменили команду: теперь Gradle запускается глобально через экшен, без обращения к локальному ./gradlew
     - name: Build with Gradle
-      run: chmod +x gradlew && ./gradlew build --no-daemon
+      run: gradle build --no-daemon
       
